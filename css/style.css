@@ -1,42 +1,58 @@
-/* Box Model Hack */
-* {
-     box-sizing: border-box;
+/**************/
+/* Box Sizing */
+/**************/
+
+*, *::after, *::before {
+    box-sizing: border-box;
 }
 
-/* Clear fix hack */
-.clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
-}
+/**************/
+/*  Styling   */
+/**************/
 
-.clear {
-	clear: both;
+:root {
+    --cell-size: 100px;
+    --mark-size: cal(var(--cell-size) * 0.9);
 }
-
-/******************************************
-/* BASE STYLES
-/*******************************************/
 
 body {
-
+    margin: 0;
 }
 
-
-/******************************************
-/* LAYOUT
-/*******************************************/
-header {
-
+.board {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
 }
 
-footer {
-
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid black;
 }
 
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+/** remove outside border **/
+    .cell:first-child,
+    .cell:nth-child(2),
+    .cell:nth-child(3) {
+        border-top: none;
+    }
+
+    .cell:nth-child(3n + 1) {
+        border-left: none;
+    }
+
+    .cell:nth-child(3n + 3) {
+        border-right: none;
+    }
+
+    .cell:last-child,
+    .cell:nth-child(7),
+    .cell:nth-child(8) {
+        border-bottom: none;
+    }
