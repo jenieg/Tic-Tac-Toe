@@ -21,7 +21,7 @@ This is a simple turn-based game made with HTML, CSS, and Javascript.
 
 ### Links
 - [GitHub Repository](https://github.com/jenieg/tic-tac-toe)
-- [Live Site](https://jenieg.github.io/tic-tac-toe/)
+- [Live Site](https://jenieg.github.io/Tic-Tac-Toe/)
 
 # My Process
 
